@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Story Book",
+    "title": "Whispers of Imagination",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Adventure Tales",
+    "title": "Journeys Beyond the Horizon",
+    "price": 100,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Learning Legends",
+    "title": "Heroes of Knowledge",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Creative Minds",
+    "title": "Ideas that Changed the World",
+    "price": 80,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Knowledge Keeper",
+    "title": "Vault of Wisdom",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Discoveries that Dazzle",
+    "title": "mno",
+    "price": 200,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tech Tales",
+    "title": "Code and Curiosity",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 8,
+    "name": "History Hunt",
+    "title": "Time Traveler’s Notebook",
+    "price": 200,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Fantasy Flight",
+    "title": "Wings of Wonder",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Code Chronicles",
+    "title": "Bytes of Brilliance",
+    "price": 180,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Mystery Maze",
+    "title": "Twists Behind the Door",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Wonder Words",
+    "title": "Language that Inspires",
+    "price": 50,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
+  }
+]
