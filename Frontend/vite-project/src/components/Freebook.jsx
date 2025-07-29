@@ -1,8 +1,8 @@
-import List from "../../public/list.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "./Cards";
+import FetchBook from "./FetchBook";
 
 export default function Freebook() {
   var settings = {
@@ -41,7 +41,8 @@ export default function Freebook() {
   };
 
   const free = [];
-  List.filter((x) => {
+  const book = FetchBook();
+  book.filter((x) => {
     if (x.category === "Free") {
       free.push(x);
     }

@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
-import List from "../../public/list.json";
 import Cards from "./Cards";
+import FetchBook from "./FetchBook";
 
 export default function Courses() {
+
+  const book = FetchBook();
+
   return (
     <div className="max-w-screen-2xl container md:px-20 px-2 dark:bg-slate-900 dark:text-white">
       <div className="bg-white dark:bg-slate-900 pt-28 flex flex-col gap-4 justify-center items-center text-center">
@@ -22,7 +25,7 @@ export default function Courses() {
         </NavLink>
       </div>
       <div className="flex flex-wrap justify-between mt-5">
-        {List.map((data) => {
+        {book.map((data) => {
           return (
             <Cards
               item={data}

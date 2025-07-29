@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function Signup() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
 
   const {
     register,
@@ -10,7 +15,39 @@ export default function Signup() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:5000/user/signup", userInfo)
+      .then((res) => {
+        if (res.data) {
+          toast.success("Signedup Successfully", {
+            style: {
+              background: "green", // slate-800
+              color: "white", // white text
+            },
+          });
+          navigate(from, { replace: true });
+        }
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+      })
+      .catch((err) => {
+        // console.log(err);
+        toast.error(err.response.data.message, {
+          style: {
+            background: "red", // slate-800
+            color: "yellow", // white text
+          },
+        });
+      });
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
+  };
   return (
     <div className="flex justify-center items-center h-screen dark:bg-slate-900 dark:text-white ">
       <div className="lg:w-[30%] border border-1 border-black rounded-xl flex flex-col justify-around p-3 shadow-md dark:border dark:border-1 dark:border-white">
@@ -20,10 +57,7 @@ export default function Signup() {
             ✕
           </Link>
         </div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          
-        >
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mt-4 flex flex-col gap-4">
             <div>
               <div className="flex gap-14">
@@ -31,8 +65,8 @@ export default function Signup() {
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="p-2 outline outline-1 outline-slate-500 rounded"
-                  {...register("name", { required: true })}
+                  className="p-2 outline outline-1 outline-slate-500 rounded text-black"
+                  {...register("fullname", { required: true })}
                 />
               </div>
               <div className="text-center">
@@ -49,7 +83,7 @@ export default function Signup() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="p-2 outline outline-1 outline-slate-500 rounded"
+                  className="p-2 outline outline-1 outline-slate-500 rounded text-black"
                   {...register("email", { required: true })}
                 />
               </div>
@@ -67,7 +101,7 @@ export default function Signup() {
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="p-2 outline outline-1 outline-slate-500 rounded"
+                  className="p-2 outline outline-1 outline-slate-500 rounded text-black"
                   {...register("password", { required: true })}
                 />
               </div>
